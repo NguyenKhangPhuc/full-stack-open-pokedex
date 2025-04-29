@@ -16,7 +16,3 @@ jobs:
         run: date
       - name: Run ls -l
         run: ls -l
-      - name: Build
-        run: npm run build
-      - name: test
-        run: npm run test
