@@ -2,7 +2,7 @@ name: Deployment pipeline
 
 on:
   workflow_run:
-    workflows: ["Hellow World!"]
+    workflows: ["Hello World!"]
     branches: [main]
     types:
       - completed
