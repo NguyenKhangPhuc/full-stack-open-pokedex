@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: action/setup-node@v4
-        node-version: '20'
+        with:
+          node-version: '20'
       - name: install dependencies
         run: npm ci
       - name: install playwright browser
