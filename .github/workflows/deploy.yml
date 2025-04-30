@@ -1,10 +1,8 @@
 name: Trigger Render Deployment
 on:
   workflow_run:
-    workflows:
-      - "Hello World!"
-      - "Deployment pipeline"
-      - "Playwright e2e test"
+    workflows: ["Playwright e2e test"]
+    branches: [main]
     types:
       - completed
 jobs:

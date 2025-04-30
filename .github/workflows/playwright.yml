@@ -1,9 +1,11 @@
 name: Playwright e2e test
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Deployment pipeline"]
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   playwright_test:
