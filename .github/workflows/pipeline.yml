@@ -46,7 +46,7 @@ jobs:
           retention-days: 30
   Deploy_to_Render:
     needs: [simple_deployment_pipeline, playwright_test]
-    if: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '#skip') }}
+    if: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '#skip') }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deployment
