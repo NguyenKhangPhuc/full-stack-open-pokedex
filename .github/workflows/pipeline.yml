@@ -44,9 +44,8 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-  main:
+  Deploy to Render:
     needs: [simple_deployment_pipeline, playwright_test]
-    name: Deploy to Render
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deployment
