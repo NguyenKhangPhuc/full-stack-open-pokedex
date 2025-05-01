@@ -56,7 +56,7 @@ jobs:
           apiKey: ${{ secrets.RENDER_API_KEY }}
           multipleDeployment: false #optional, default true
   tag_release:
-    needs: [Deploy to Render]
+    needs: [Deploy_to_Render]
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     permissions:
