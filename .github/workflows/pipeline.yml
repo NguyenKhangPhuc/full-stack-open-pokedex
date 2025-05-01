@@ -1,11 +1,12 @@
 name: Deployment pipeline
 
 on:
-  workflow_run:
-    workflows: ["Hello World!"]
+  push:
+    branches:
+      - main
+  pull_request:
     branches: [main]
-    types:
-      - completed
+    types: [opened, synchronize]
 
 jobs:
   simple_deployment_pipeline:
@@ -24,4 +25,3 @@ jobs:
       - name: test
         run: npm run test
 
-        
