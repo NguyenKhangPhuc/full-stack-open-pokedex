@@ -1,9 +1,8 @@
 name: Health Check
 
 on:
-  push:
-    branches:
-      - dev
+  schedule:
+    - cron: '0 19 * * *'  # 19:00 UTC = 22:00 Helsinki
 
 jobs:
   health_check:
